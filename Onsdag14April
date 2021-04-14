@@ -5,6 +5,12 @@
 
 Virtuell DOM.
 ** Props
+//props:- properties  -> // parent -child component 
+
+// parent kan passera value till child 
+
+
+
 ** State
 ** State vs props 
 

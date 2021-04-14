@@ -39,4 +39,3 @@ export default Menu1;
 export {Menu1, Menu2};
 
 
-//props
