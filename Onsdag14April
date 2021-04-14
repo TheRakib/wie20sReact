@@ -11,7 +11,10 @@ Virtuell DOM.
 
 
 
-** State
+** State:-
+     input -> name -> state
+
+
 ** State vs props 
 
 
