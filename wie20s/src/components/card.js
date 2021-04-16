@@ -17,7 +17,7 @@ import React, {useState} from "react";
 // varför lägger vi så {props.name}  {  }? 
 // När vi lägger javascript i jsx lägger vi { }
 // Varför använder vi props? 
-function Card(props) {
+function Card() {
     const [name, setName] = useState("")
      //  ()=> { } arrow function 
     return(
@@ -26,9 +26,9 @@ function Card(props) {
 
          
          <button onClick={ ()=>{ setName("Hallå")}  }   > - </button>
-         <div> {name}   </div> 
+         <div>   </div> 
         
-        <div> Price: {props.price} </div>
+        <div> </div>
        
         </>
     )
