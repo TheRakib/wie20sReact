@@ -1,5 +1,8 @@
 import React from "react";
-import {Route, BrowserRouter, Switch, Link} from "react-router-dom";
+
+import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
+
+
 import Menu, {Menu2 } from "./menu";
 
 
@@ -11,16 +14,16 @@ function Header() {
     return(
         <>
        
-        <BrowserRouter>
-
-         <Link to="/">Card</Link>
-         <Link to="/home">Menu</Link>
-          
+      
+        <Router>
+            
+              <Menu />
+             
              <Route path="/"  exact component={Card} />
              <Route path="/home"  component={Menu}/>
              <Route path="/form"  component={Form}/>
           
-        </BrowserRouter>
+        </Router>
 
 
        

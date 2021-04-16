@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 // props  == {ex}   /props.ex / var {ex}= props
 function Menu1({ex}) {
@@ -7,10 +8,8 @@ function Menu1({ex}) {
          <nav>
              {/* comments:-    props.ex  = ex  */}
              {ex}
-             <a href="#">Hem </a>
-             <a href="#">Tjänster</a>
-             <a href="#">Kontakta oss</a>
-             <a href="#">Om oss</a>
+             <Link to="/">Card</Link>
+             <Link to="/home">Menu</Link>
          </nav>
         </>   
     )
