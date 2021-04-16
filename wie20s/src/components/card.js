@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 // state:  hur vi kan passsera data inuti componentet
-
 // event : onClick , onChange, onSubmit 
 
 // hur vi använder state ? 
@@ -19,7 +18,7 @@ import React, {useState} from "react";
 // När vi lägger javascript i jsx lägger vi { }
 // Varför använder vi props? 
 function Card(props) {
-    const [name, setName] = useState(" Hello ")
+    const [name, setName] = useState("")
      //  ()=> { } arrow function 
     return(
         <>
@@ -27,7 +26,7 @@ function Card(props) {
 
          
          <button onClick={ ()=>{ setName("Hallå")}  }   > - </button>
-         <div>{name}   </div> 
+         <div> {name}   </div> 
         
         <div> Price: {props.price} </div>
        

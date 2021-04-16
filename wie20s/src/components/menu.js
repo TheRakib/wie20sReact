@@ -1,9 +1,12 @@
 import React from "react";
 
-function Menu1() {
+// props  == {ex}   /props.ex / var {ex}= props
+function Menu1({ex}) {
     return (
         <>
          <nav>
+             {/* comments:-    props.ex  = ex  */}
+             {ex}
              <a href="#">Hem </a>
              <a href="#">Tjänster</a>
              <a href="#">Kontakta oss</a>

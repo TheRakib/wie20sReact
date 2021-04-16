@@ -7,7 +7,7 @@ function Header() {
 
     return(
         <>
-        <Menu />
+        <Menu ex="test"/>
         <Menu2 />
         <Card price="10" name="Hej"  />
         </>
