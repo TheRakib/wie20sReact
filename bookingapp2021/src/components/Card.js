@@ -1,9 +1,15 @@
 import React from 'react'
 
-function card() {
+
+
+function card({productName, price}) {
     return (
         <div>
-            card
+            
+        ====================    
+           <div>  {productName}   </div> 
+            <div>    {price} </div>
+        ====================
         </div>
     )
 }

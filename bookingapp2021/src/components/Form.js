@@ -1,10 +1,40 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 function Form() {
+
+
+    const initialValues = {
+        productName:" ",
+        price: " "
+    }
+    const [formValues, setFormValues] = useState(initialValues)
+
+
+    function onHandleSubmit() {
+      // fixa detta 
+    }
+  
+
+    function onHandleChange() {
+        // fixa detta 
+    }
+
+
     return (
-        <div>
-            form
-        </div>
+        <>
+            
+              
+         <form onSubmit={onHandleSubmit} >
+             
+             <input  value={formValues.productName} name="productName" onChange={onHandleChange} />
+             <input type="number" name="price" value ={formValues.price} onChange={onHandleChange}/>
+             
+             <button>Lägg till</button>
+
+         </form>
+
+
+        </>
     )
 }
 
