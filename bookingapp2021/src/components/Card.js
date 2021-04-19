@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+
 
 
 
 function card({productName, price}) {
     return (
-        <div>
+        <div className="relative bg-white">
             
         ====================    
            <div>  {productName}   </div> 

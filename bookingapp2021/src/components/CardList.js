@@ -15,16 +15,14 @@ function CardList() {
     return (
         <div>
              Flera card
+     
 
              {arrayOfProductObject.map((product)=>{
                  return (
                      <Card productName={product.productName}  price={product.price} />
                  )
              }) }
-           
-           
-           
-           
+               
         </div>
     )
 }
@@ -32,3 +30,4 @@ function CardList() {
 export default CardList
 
 // rfce
+// 11.00

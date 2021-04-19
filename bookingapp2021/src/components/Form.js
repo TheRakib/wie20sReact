@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
 
+
+const isAdmin=true;
+
 function Form() {
 
 
@@ -23,17 +26,15 @@ function Form() {
     return (
         <>
             
-              
-         <form onSubmit={onHandleSubmit} >
-             
-             <input  value={formValues.productName} name="productName" onChange={onHandleChange} />
-             <input type="number" name="price" value ={formValues.price} onChange={onHandleChange}/>
-             
-             <button>Lägg till</button>
-
-         </form>
-
-
+      {isAdmin ?   
+      (<form onSubmit={onHandleSubmit} >
+            <label> ProductName:  </label> <input className="border" placeholder="Ange product name" value={formValues.productName} name="productName" onChange={onHandleChange} />
+            <input className="border " placeholder="Ange price " type="number" name="price" value ={formValues.price} onChange={onHandleChange}/>
+            <button className="bg-purple-600">Lägg till</button>
+       </form>) 
+         : 
+         (<div>Du har inte behörighet att se detta sidan</div> )}  
+        
         </>
     )
 }
