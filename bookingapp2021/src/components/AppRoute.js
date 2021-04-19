@@ -1,6 +1,7 @@
 import React from "react";
-import Card from "./Card";
+import CardList from "./CardList";
 import Form from "./Form";
+import Menu from "./Menu"
 
 import {Route, BrowserRouter as Router} from "react-router-dom"
 // react-router-dom ?? 
@@ -14,8 +15,10 @@ export default function AppRoute(){
         <>
 
         <Router>  
-           
-           <Route path="/" exact component={Card} />
+              
+          <Menu />
+
+           <Route path="/" exact component={CardList} />
            <Route path="/form" component={Form} />
 
         </Router>
@@ -25,3 +28,5 @@ export default function AppRoute(){
         </>
     )
 }
+
+// kl. 10.00
