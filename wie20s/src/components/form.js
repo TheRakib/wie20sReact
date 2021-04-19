@@ -32,7 +32,6 @@ setFormValues( {
             value={formValues.name}
             onChange={handleOnChange} 
             />
-
             <input 
             placeholder="Enter email"
             name="email"
@@ -60,6 +59,6 @@ export default Form;
          //  DOM Kontoller input element om vi inte sätter controlled element
          
 
-         
+
 // React-router-dom
   
