@@ -1,0 +1,44 @@
+* Upprepning 
+
+
+** components
+
+** functional components? 
+    function functionname() {  return (jsx)}
+
+   <> <JSX> </JSX> <JSX> </JSX>  </>
+   {}
+
+** props ? parent component till child component 
+
+** State ?  payload , data som ändras inuti component 
+      useState
+
+** Form ? onchange och state : controlled elements  
+
+** conditional rendering : beroende på state visas vi nån component
+
+  ? 
+  &&
+
+
+
+
+
+** CSS:-  tailwindcss 
+
+ * Class component och life cyclemetoder:- 
+    state, life cycle methods :-
+
+
+
+
+** Gör klar UI innan Måndag. 
+
+
+genomgång tills 11.45.
+
+13.00-14.00 handledning
+ 
+
+

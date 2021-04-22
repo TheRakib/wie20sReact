@@ -3,7 +3,7 @@ import Card from "./Card"
 
 
 // ska komma från database eller apies 
-const arrayOfProductObject = [
+const products = [
     {productName:"Headphone1" , price:"1800"} ,
     {productName:"Headphone2" , price:"2800"} ,
     {productName:"Headphone4" , price:"800"} 
@@ -14,12 +14,10 @@ const arrayOfProductObject = [
 function CardList() {
     return (
         <div>
-             Flera card
-     
-
-             {arrayOfProductObject.map((product)=>{
+            
+             {products.map((product)=>{
                  return (
-                     <Card productName={product.productName}  price={product.price} />
+                     <Card key={product.price} productName={product.productName}  price={product.price} />
                  )
              }) }
                
@@ -31,3 +29,5 @@ export default CardList
 
 // rfce
 // 11.00
+
+

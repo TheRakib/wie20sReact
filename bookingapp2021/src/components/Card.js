@@ -3,13 +3,13 @@ import React from 'react';
 
 
 
-function card({productName, price}) {
+function card( {productName, price}   ) {
     return (
         <div className="relative bg-white">
             
         ====================    
-           <div>  {productName}   </div> 
-            <div>    {price} </div>
+           <div>  Name: {productName}   </div> 
+            <div>  Price:  {price} </div>
         ====================
         </div>
     )

@@ -7,15 +7,12 @@
 
 
  // npm i -g yarn
-
-
      * menu
-     * card 
+     * Single card 
+     * listor av card
      * router 
      * form 
-
-
-** conditional rendering :- 
+    ** conditional rendering :- 
      lägg till button(beroende på event kan jag rendera saker och ting) -> component 
      behörighet: 
 
