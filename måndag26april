@@ -1,0 +1,66 @@
+* frågestund : 
+  - login, logout, register 
+  - routing 
+  - Authorisation , Authentication 
+  - Var ska vi lagra data permanent plus temporary? 
+  - Hur ska vi lagra bilder?
+  - Hur integrerar vi med betalning tjänster? 
+  - Dynamic navigation , redirecting
+  
+  
+
+* Hantera/komsumera API:-  application programming interface  
+
+
+endpoints : sl.se/api/passagerare
+     api  /endpoints :
+    
+     request  ->  response   
+     write , Read -> response 
+
+
+request: 
+    get // läsa 
+    post // skriva data 
+    update/put // för att kunna uppdatera 
+    delete // radera 
+
+
+*** npm i axios 
+
+
+
+* useEffect , jämföra useEffect med class component 
+
+
+// varje gång din state uppdateras renderar din component.
+// varje gång renderar din component körs useEffect. 
+
+
+// state -> component -> useEffect 
+
+// useEffect kan ha en default value.  default value kan det vara en state , flera state . 
+// Om state ändras triggas useEffect
+
+// useEffect kan ha en return /unmount 
+
+ vs 
+
+// state -> render/component -> componentDidMount   componentWillUnmount
+
+
+
+
+
+
+
+* bilder i React background bilder , logo vs bilder från användare/skalbar bilder :-
+
+
+   public mappen : - relative path  : "/assets/fire.jpg"
+
+
+   src mappen:- import 
+
+
+  

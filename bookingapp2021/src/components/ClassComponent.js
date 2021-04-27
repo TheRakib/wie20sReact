@@ -52,3 +52,6 @@ componentWillUnmount() {
 export default ClassComponent;
 
 //kl. 11.00
+
+
+// state -> render/component -> componentDidMount   componentWillUnmount
