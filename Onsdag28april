@@ -1,0 +1,23 @@
+
+
+* Menu /navbar delen med tailwindcss. 
+   
+* implementering av useEffect:- 
+
+
+      * headless CMS , Strapi som headless CMS installation. 
+
+
+
+
+      * content/saker och ting som vill sälja och skapa endpoints för detta 
+
+
+          * Skapa collection type 
+          * mata in data i collection type
+          * Gå in i settings -> USERS & PERMISSIONS PLUGIN ->roles -public - application - collection ->tryck på create, find och alla andra operation delen
+
+          * localhost:1337/products 
+           
+      * anropa endpoints från react 
+

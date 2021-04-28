@@ -15,11 +15,11 @@ function App() {
 
 
   return (
-    <div className="App" style={{backgroundImage:`url(${fire})`}}  >
+    <div className="App"   >
        
     
 
-     <API/>
+  <AppRoute/>
       
     </div>
   );
