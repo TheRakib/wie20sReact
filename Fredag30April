@@ -1,0 +1,21 @@
+*  Upprepning stapi setup:- 
+npx create-strapi-app dinappnamn --quickstart
+
+ , skapa collection/tables: Gå till localhost:1337/admin 
+                            content-types-builder   : http://localhost:1337/admin/plugins/content-type-builder/content-types/
+
+ 
+ 
+  mata in data/fields in i collection/tables:- collections-> matar in data
+      , öppna api endpoints :- settings- user roles and PERMISSIONS-> role-> 
+      public -> application-> products - CRUD -sparar vi. 
+
+      
+      ,  react useEffect hooks för att kunna fetcha den här endpoints
+      card. 
+
+  strapi? färdigt backend(database, backend api endpoints)/CMS , headless cms 
+
+*  Registering/login via strapi 
+
+===== 11.30 till 12.30 
