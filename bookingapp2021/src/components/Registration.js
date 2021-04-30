@@ -3,17 +3,55 @@ import axios from "axios";
 
 function Registration() {
 
+  const intialValue = {
+      username:" ",
+      email:" ",
+      password:""
+  }
+
+  const [registerValues, setRegisterValues] = useState(intialValue)
+
+    // onchange ?? 
+    
+    function handleOnChange(e) {
+
+    //??
+    //setRegisterValues({})
+ 
+
+
+    setRegisterValues({...registerValues, [e.target.name]: e.target.value})
+
+    }
+
+    function handleOnSubmit(e) {
+       e.preventDefault();
+
+       console.log( registerValues.username, registerValues.email)
+      const response = axios.post('http://localhost:1337/auth/local/register', {
+                username: registerValues.username,
+                email: registerValues.email,
+                password: registerValues.password,
+            }).then( (e)=> { console.log(e.data)})
 
 
 
+            //console.log(response)
+       // vi ska skicka user registration data till strapi /enpoints 
+    } 
+
+
+    // gör så att när användare submit form ska användare få : du är registerat nu meddelandet
+    //  conditional rendering. 
+
+   /*  // componentDidMount
     useEffect(() => {
         const registerUser = async () => {
             const response = await axios.post('http://localhost:1337/auth/local/register', {
-                username: ' use',
-                email: 'user@li.com',
-                password: 'strapiPassword',
+                username: registerValues.username,
+                email: registerValues.email,
+                password: registerValues.password,
             })
-
             console.log(response)
 
         }
@@ -40,41 +78,37 @@ function Registration() {
 
     }, [])
 
-
+ */
 
 
     return (
         <div>
-            <h1>  Register User    </h1> 
-
             <div class="container max-w-full mx-auto md:py-24 px-6">
   <div class="max-w-sm mx-auto px-6">
         <div class="relative flex flex-wrap">
             <div class="w-full relative">
                 <div class="md:mt-6">
                     <div class="text-center font-semibold text-black">
-                        Lorem ipsum dolor
+                    Register User  
                     </div>
-                    <div class="text-center font-base text-black">
-                        Sed ut perspiciatis unde?
-                    </div>
-                    <form class="mt-8" x-data="{password: '',password_confirm: ''}">
+                
+                    <form class="mt-8" x-data="{password: '',password_confirm: ''}"  onSubmit={handleOnSubmit}>
                         <div class="mx-auto max-w-lg ">
                             <div class="py-1">
                                 <span class="px-1 text-sm text-gray-600">Username</span>
-                                <input placeholder="" type="text"
+                                <input placeholder="" type="text" name="username" value={registerValues.username} onChange={handleOnChange} 
                                        class="text-md block px-3 py-2 rounded-lg w-full
                 bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"/>
                             </div>
                             <div class="py-1">
                                 <span class="px-1 text-sm text-gray-600">Email</span>
-                                <input placeholder="" type="email"
+                                <input placeholder="" type="email" name="email" value={registerValues.email} onChange={handleOnChange}
                                        class="text-md block px-3 py-2 rounded-lg w-full
                 bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"/>
                             </div>
                             <div class="py-1">
                                 <span class="px-1 text-sm text-gray-600">Password</span>
-                                <input placeholder="" type="password" x-model="password"
+                                <input placeholder="" type="password" x-model="password" name="password" value={registerValues.password} onChange={handleOnChange}
                                        class="text-md block px-3 py-2 rounded-lg w-full
                 bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"/>
                             </div>
