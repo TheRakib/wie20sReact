@@ -12,6 +12,7 @@ function Registration() {
   const [registerValues, setRegisterValues] = useState(intialValue)
   const [username, setUsername] = useState("");
   const [loggedIn, SetLoggedIn] = useState(false);
+  const [error, setError] = useState("")
 
     // onchange ?? 
     
@@ -21,18 +22,19 @@ function handleOnChange(e) {
 
 function handleOnSubmit(e) {
        e.preventDefault();
+
       axios.post('http://localhost:1337/auth/local/register', {
                 username: registerValues.username,
                 email: registerValues.email,
                 password: registerValues.password,
             })
             .then( (e)=> {  if(e.data.user) SetLoggedIn(true) })
-            .catch((err)=> {console.log(err)}) 
+            .catch((err)=> {setError(err.response.data.message[0].messages[0].message)}) 
             // async ()=>  const response =   await axios.post()
             // response
             // apirequest.then( (response)=>  console.log(response))
             //console.log(response)
-       // vi ska skicka user registration data till strapi /enpoints 
+          // vi ska skicka user registration data till strapi /enpoints 
     } 
 
 
@@ -86,7 +88,7 @@ function handleOnSubmit(e) {
                     <div class="text-center font-semibold text-black">
                     Register User  
                     </div>
-                
+                    
                     <form class="mt-8" x-data="{password: '',password_confirm: ''}"  onSubmit={handleOnSubmit}>
                         <div class="mx-auto max-w-lg ">
                             <div class="py-1">
@@ -96,6 +98,7 @@ function handleOnSubmit(e) {
                 bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"/>
                             </div>
                             <div class="py-1">
+                            <div className="text-purple-600"> {error}</div>
                                 <span class="px-1 text-sm text-gray-600">Email</span>
                                 <input placeholder="" type="email" name="email" value={registerValues.email} onChange={handleOnChange}
                                        class="text-md block px-3 py-2 rounded-lg w-full

@@ -31,6 +31,9 @@ function handleOnchange(e) {
     // Handle success.
     console.log('User profile', response.data.user);
     console.log('User token', response.data.jwt);
+
+    // spara response.data.jwt i client sidan 
+      
     console.log("user data ", response.data)
     setUsername(response.data.user.username)
     setAuthenticated(true);
@@ -38,10 +41,14 @@ function handleOnchange(e) {
   })
   .catch( (err)=>{
      console.log(err); 
-    setError("Dina inloggningsuppgifter stämmer inte")
+     // if user is not registered show that he needs to be registered
+    setError("Dina inloggningar stämmer inte eller du inte är registerat")
+    //setError(err.response.message[0].messages[0].message)
   })
    }
 
+   // 11.00
+   
    
 
     return (  

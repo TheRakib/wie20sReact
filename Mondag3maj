@@ -2,6 +2,14 @@
 * Conditional rendering
 * Login 
 * useEffect, event 
-* promises vs Async await 
+* promises then catch vs Async await 
             
 
+// Spara jwt token i client sidan
+
+// anpassa login/register enligt er behov
+
+
+// testa addproduct 
+
+// testa email validation , reset password 

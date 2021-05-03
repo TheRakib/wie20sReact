@@ -10,6 +10,8 @@ function  API () {
     
     useEffect(()=>{
          const fetchData = async()=> {
+
+            try {
          const response=   await axios.get("https://jsonplaceholder.typicode.com/todos/1")
           // axios är ett fetch bibliotek , http get, post, update , delete  
           console.log(response.data)
@@ -17,9 +19,29 @@ function  API () {
           // json.string
           setData(res)
         }
+    
+    catch(err) {
+        console.log(err)    
+    }
         
+}
         fetchData()   
     }, [])
+
+
+
+    // async function name() { 
+    // const response = await axios.get("https://jsonplaceholder.typicode.com/todos/1")
+    // console.log(response)   }
+
+    //  axios.get("https://jsonplaceholder.typicode.com/todos/1").then(  (response)=> console.log(response) )
+    //  .catch(err => {console.log(err) }) 
+
+
+    // try{    // async function name() { 
+    // const response = await axios.get("https://jsonplaceholder.typicode.com/todos/1")
+    // console.log(response)   }
+    //}  catch (err) { console.log(err) } 
 
 
     // vi ska inte lägga fetchData functionen utanför useEffect
