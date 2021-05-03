@@ -9,12 +9,12 @@ function Login() {
     email:"",
     password:""
   }
-const [formValues, setFormValues]= useState(initailValues)
+const [formValues, setFormValues]= useState(initailValues);
+const [error, setError]= useState("")
+const [authenticated, setAuthenticated] = useState(false);
+const [username, setUsername] = useState("")
 
-
-
-
-  function handleOnchange(e) {
+function handleOnchange(e) {
     setFormValues({...formValues, [e.target.name]:e.target.value})
   }
 
@@ -29,24 +29,25 @@ const [formValues, setFormValues]= useState(initailValues)
   })
   .then(response => {
     // Handle success.
-    console.log('Well done!');
     console.log('User profile', response.data.user);
     console.log('User token', response.data.jwt);
     console.log("user data ", response.data)
+    setUsername(response.data.user.username)
+    setAuthenticated(true);
+    // ändra state som kommer att rendera nån component vid inloggning
   })
-
-
+  .catch( (err)=>{
+     console.log(err); 
+    setError("Dina inloggningsuppgifter stämmer inte")
+  })
    }
 
- 
-
-
-
-
+   
 
     return (  
 
       <> 
+      {authenticated ? <div> välkommen {username} </div> : 
 <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
   <div className="max-w-md w-full space-y-8">
     <div>
@@ -54,6 +55,7 @@ const [formValues, setFormValues]= useState(initailValues)
       <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
         Sign in to your account
       </h2>
+      <h1>{error}</h1>
     <form className="mt-8 space-y-6" onSubmit={handleOnSubmit}  method="POST">
       <input type="hidden" name="remember" value="true"/>
       <div className="rounded-md shadow-sm -space-y-px">
@@ -97,7 +99,7 @@ const [formValues, setFormValues]= useState(initailValues)
 </div>
 </div>
 </div>
-
+}
 </>
     )
 }
