@@ -10,12 +10,28 @@ npx create-strapi-app dinappnamn --quickstart
       , öppna api endpoints :- settings- user roles and PERMISSIONS-> role-> 
       public -> application-> products - CRUD -sparar vi. 
 
-      
+
       ,  react useEffect hooks för att kunna fetcha den här endpoints
       card. 
 
   strapi? färdigt backend(database, backend api endpoints)/CMS , headless cms 
 
+
+
+
+
 *  Registering/login via strapi 
+
+  
+
+  // component som är template ? card:- name, description, price , Image : src , button, 
+
+
+         App.js :   <Card name="Pelle" description="pelle ksalfja"/>
+
+
+// Gör så att när användare submit form ska användare få : du är registerat nu meddelandet
+// Conditional rendering. 
+
 
 ===== 11.30 till 12.30 
