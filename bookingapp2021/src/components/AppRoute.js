@@ -2,7 +2,8 @@ import React from "react";
 import CardList from "./CardList";
 import Form from "./Form";
 import Menu from "./Menu";
-import Registration from "./Registration"
+import Registration from "./Registration";
+import Login from "./Login";
 
 import {Route, BrowserRouter as Router} from "react-router-dom"
 // react-router-dom ?? 
@@ -23,6 +24,7 @@ export default function AppRoute(){
         
            <Route path="/" exact component={CardList} />
            <Route path="/form" component={Form} />
+           <Route path="/login" component= {Login} />
            <Route path="/register" component={Registration} />
 
         </Router>
