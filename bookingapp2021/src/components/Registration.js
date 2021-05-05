@@ -1,11 +1,14 @@
 import React, {useEffect, useState} from 'react';
+import {useHistory} from "react-router-dom";
 import axios from "axios";
 
+
+// useHistory
 function Registration() {
 
   const intialValue = {
-      username:" ",
-      email:" ",
+      username:"",
+      email:"",
       password:""
   }
 
@@ -13,22 +16,35 @@ function Registration() {
   const [username, setUsername] = useState("");
   const [loggedIn, SetLoggedIn] = useState(false);
   const [error, setError] = useState("")
+  const history = useHistory();
 
     // onchange ?? 
     
 function handleOnChange(e) {
+
        setRegisterValues({...registerValues, [e.target.name]: e.target.value})
 }
 
 function handleOnSubmit(e) {
        e.preventDefault();
 
+       // registerValues.username, 
+
+       //?? 
+      
       axios.post('http://localhost:1337/auth/local/register', {
                 username: registerValues.username,
                 email: registerValues.email,
                 password: registerValues.password,
             })
-            .then( (e)=> {  if(e.data.user) SetLoggedIn(true) })
+            .then( (e)=> {  
+                
+                if(e.data.user) 
+                history.push("/login")
+                //SetLoggedIn(true)
+                // redirect user login page
+            
+            })
             .catch((err)=> {setError(err.response.data.message[0].messages[0].message)}) 
             // async ()=>  const response =   await axios.post()
             // response

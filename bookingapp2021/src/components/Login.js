@@ -1,4 +1,5 @@
 import React, {useState } from 'react';
+
 import axios from "axios";
 
 
@@ -13,6 +14,7 @@ const [formValues, setFormValues]= useState(initailValues);
 const [error, setError]= useState("")
 const [authenticated, setAuthenticated] = useState(false);
 const [username, setUsername] = useState("")
+
 
 function handleOnchange(e) {
     setFormValues({...formValues, [e.target.name]:e.target.value})
@@ -37,6 +39,7 @@ function handleOnchange(e) {
     console.log("user data ", response.data)
     setUsername(response.data.user.username)
     setAuthenticated(true);
+   
     // ändra state som kommer att rendera nån component vid inloggning
   })
   .catch( (err)=>{
@@ -49,7 +52,7 @@ function handleOnchange(e) {
 
    // 11.00
    
-   
+
 
     return (  
 
