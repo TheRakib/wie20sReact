@@ -16,7 +16,6 @@ function Registration() {
   const [registerValues, setRegisterValues] = useState(intialValue)
   const [username, setUsername] = useState("");
   const [loggedIn, SetLoggedIn] = useState(false);
-  const [auth, setAuth] = useState("Login")
   const [error, setError] = useState("")
   const history = useHistory();
 
@@ -55,13 +54,7 @@ function handleOnSubmit(e) {
           // vi ska skicka user registration data till strapi /enpoints 
     } 
 
-    function changeToLogin() {
-       SetLoggedIn(true)
-    }
-
-    function changeToRegister() {
-        SetLoggedIn(false)
-     }
+    
 
     // gör så att när användare submit form ska användare få : du är registerat nu meddelandet
     //  conditional rendering. 
@@ -105,17 +98,10 @@ changeToRegister
 
     return (
         <>
-        {loggedIn ?  (<> 
+        {loggedIn ?   
         
         <Login/> 
-        <button class="mt-3 text-lg font-semibold
-            bg-gray-800 w-full text-white rounded-lg
-            px-6 py-3 block shadow-xl hover:text-white hover:bg-black" onClick={changeToRegister}>
-                              Change to Register
-                            </button>
-        
-        
-        </>) :(<div class="container max-w-full mx-auto md:py-24 px-6">
+         :(<div class="container max-w-full mx-auto md:py-24 px-6">
   <div class="max-w-sm mx-auto px-6">
         <div class="relative flex flex-wrap">
             <div class="w-full relative">
@@ -165,11 +151,7 @@ changeToRegister
                                     </span>
                                 </label>
                             </div>
-           <button class="mt-3 text-lg font-semibold
-            bg-gray-800 w-full text-white rounded-lg
-            px-6 py-3 block shadow-xl hover:text-white hover:bg-black" onClick={changeToLogin}>
-                                Change to {auth}
-                            </button>
+          
 
                             <button class="mt-3 text-lg font-semibold
             bg-gray-800 w-full text-white rounded-lg
