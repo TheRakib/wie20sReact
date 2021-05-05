@@ -24,7 +24,7 @@ export default function AppRoute(){
               
            <Menu />
         
-           <Route path="/" exact component={CardList} />
+           <Route path="/card" exact component={CardList} />
            <Route path="/form" component={Form} />
            <Route path="/login" component= {Login} />
            <Route path="/register" component={Registration} />

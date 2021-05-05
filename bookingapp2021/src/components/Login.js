@@ -1,5 +1,5 @@
-import React, {useState } from 'react';
-
+import React, {useState, useEffect } from 'react';
+import {useHistory} from "react-router-dom"
 import axios from "axios";
 
 
@@ -12,13 +12,26 @@ function Login() {
   }
 const [formValues, setFormValues]= useState(initailValues);
 const [error, setError]= useState("")
-const [authenticated, setAuthenticated] = useState(false);
+//const [authenticated, setAuthenticated] = useState(false);
 const [username, setUsername] = useState("")
-
+const [jwt, setJwt] = useState("")
+const history= useHistory();
 
 function handleOnchange(e) {
     setFormValues({...formValues, [e.target.name]:e.target.value})
   }
+
+  useEffect(()=>{
+     
+   const JWT = localStorage.getItem("jwt")
+   setJwt(JWT);
+
+
+  }, [])
+
+
+
+
 
    function handleOnSubmit(e){
      e.preventDefault();
@@ -33,12 +46,27 @@ function handleOnchange(e) {
     // Handle success.
     console.log('User profile', response.data.user);
     console.log('User token', response.data.jwt);
-
+     
+    //setJwt(response.data.jwt)
     // spara response.data.jwt i client sidan 
+    localStorage.setItem("jwt", response.data.jwt);
+
+     //setUsername(response.data.user.username)
+     
+    history.push("/card")
+
+
+    //const JWT= localStorage.getItem("jwt")
+    //console.log(testJWT)
+
+   // setJwt(JWT)
       
+   // console.log("jwt state", jwt)
+
+
     console.log("user data ", response.data)
     setUsername(response.data.user.username)
-    setAuthenticated(true);
+   
    
     // ändra state som kommer att rendera nån component vid inloggning
   })
@@ -57,7 +85,7 @@ function handleOnchange(e) {
     return (  
 
       <> 
-      {authenticated ? <div> välkommen {username} </div> : 
+       
 <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
   <div className="max-w-md w-full space-y-8">
     <div>
@@ -109,9 +137,12 @@ function handleOnchange(e) {
 </div>
 </div>
 </div>
-}
+
 </>
     )
 }
 
 export default Login
+
+//State -> renderar component 
+ // useEffect 
