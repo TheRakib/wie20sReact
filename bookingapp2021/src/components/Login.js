@@ -1,5 +1,5 @@
 import React, {useState, useEffect } from 'react';
-import {useHistory} from "react-router-dom"
+import {useHistory} from "react-router-dom";
 import axios from "axios";
 
 
@@ -54,7 +54,7 @@ function handleOnchange(e) {
      //setUsername(response.data.user.username)
      
     history.push("/card")
-
+    window.location.reload();
 
     //const JWT= localStorage.getItem("jwt")
     //console.log(testJWT)
@@ -64,10 +64,8 @@ function handleOnchange(e) {
    // console.log("jwt state", jwt)
 
 
-    console.log("user data ", response.data)
-    setUsername(response.data.user.username)
-   
-   
+    //console.log("user data ", response.data)
+    //setUsername(response.data.user.username)
     // ändra state som kommer att rendera nån component vid inloggning
   })
   .catch( (err)=>{

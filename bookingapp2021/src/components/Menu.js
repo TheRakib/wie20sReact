@@ -1,26 +1,32 @@
 import React , {useState, useEffect}from 'react';
 import {Link } from "react-router-dom";
 
-
+//jsonwebtoken
 function Menu() {
+const [jwt, setJwt] = useState(null);
 
-  
+// hooks -> life cycle method,  en component anropning-> render (JSX)  -> ComponentDidMount
 
-  const [jwt, setJwt] = useState("")
+// varje gång din state uppdateras , uppdaterar din component/jsx
+
+                                    //-> componentDidUpdate -> componentwillUnmount
+// life cycle method, -> componentDidRendered()
+useEffect(()=>{
+       const JWT = localStorage.getItem("jwt")
+       setJwt(JWT)  
+   //return ()=>  fun(); 
+  },  [])
 
 
-  useEffect(  ()=>{
-     console.log("hej ")
-     const JWT =  localStorage.getItem("jwt")
-     setJwt(JWT)
-   
-  }, [])
+function clearLocalStorage() {
+  localStorage.clear();
+  window.location.reload();
 
-  
-    return (
-        
+}
+
+return (   
      <>
-     {  jwt ? 
+     { jwt ? 
       ( <nav class="bg-gray-800">
        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
        <div class="relative flex items-center justify-between h-16">
@@ -31,17 +37,17 @@ function Menu() {
           <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"/>
           <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow"/>
         </div>
-        <div class="hidden sm:block sm:ml-6">
+        <div className="hidden sm:block sm:ml-6">
 
-          <div class="flex space-x-4">
+          <div className="flex space-x-4">
            
             <Link to="/card" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Cardlist</Link>
 
-            <Link to="/form" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Form</Link>
+            <Link to="/form" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Form</Link>
 
-            <Link to="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">logout</Link>
-
-         
+            {/* <Link to="/logout" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">logout</Link>
+ */}
+          <button  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={clearLocalStorage}>logout</button>
           </div>
 
         </div>
