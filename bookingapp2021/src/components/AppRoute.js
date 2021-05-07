@@ -6,7 +6,10 @@ import Registration from "./Registration";
 import Login from "./Login";
 
 import AddToCard from "./AddToCard";
-import ResetPassword from "./ResetPassword";
+import ForgotPassword from "./Forgot-password";
+import ResetPassword from "./Reset-Password"
+import Upload from "./UploadFile";
+
 
 import {Route, BrowserRouter as Router, Switch} from "react-router-dom"
 // react-router-dom ?? 
@@ -30,7 +33,9 @@ export default function AppRoute(){
            <Route path="/login" component= {Login} />
            <Route path="/register" component={Registration} />
            <Route path="/addproduct" component={AddToCard} />
-           <Route path="/resetpassword" component= {ResetPassword} />
+           <Route path="/reset-password" component= {ResetPassword} />
+           <Route path="/forgot-password" component= {ForgotPassword} />
+           <Route path="/upload" component={Upload} />
            </Switch>
         </Router>
            
@@ -40,4 +45,4 @@ export default function AppRoute(){
     )
 }
 
-// kl. 10.00
+// kl. 11.00

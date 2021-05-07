@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios';
 
 
-function ResetPassword() {
+function ForgotPassword() {
 
 function resetRequest() {
         axios
@@ -15,8 +15,6 @@ function resetRequest() {
         .catch(error => {
           console.log('An error occurred:', error.response);
         });
-           
-
     }
   
    
@@ -26,14 +24,14 @@ function resetRequest() {
 
     return (
         <div>
-            <form onSubmit={resetRequest} method="post">
+           
             lösenord återställning
-             <button className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" >
+             <button onClick={resetRequest} className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" >
                   återställa lösenord   
             </button>
-            </form>
+          
         </div>
     )
 }
 
-export default ResetPassword
+export default ForgotPassword
