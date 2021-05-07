@@ -7,7 +7,7 @@ function UploadFile() {
     // 
     function handleOnChange(e) {
 
-    console.log(e.target.files[0])
+    console.log(e.target.files)
 
     setFileData(e.target.files[0])
 
@@ -16,21 +16,16 @@ function UploadFile() {
 
     function FileUpload (e) {
         e.preventDefault();
-
         // FormData()
         const formData = new FormData()
-
-        formData.append("files", JSON.stringify(fileData))
-
+        //formData.append("files", JSON.stringify(fileData))
+        formData.append("files", fileData)
         console.log(formData)
-
         axios.post("http://localhost:1337/upload", {
             img: formData
         })
         .then(  (response)=> {console.log("text" , response.data)} )
-        .catch(   (error) => {console.log( "error text", error)})
-
-       
+        .catch(   (error) => {console.log( "error text", error)}) 
 
     }
 
@@ -41,7 +36,6 @@ function UploadFile() {
             <input type="file" name="file" onChange={handleOnChange} />
              <button>Click to submit</button>
             </form>
-
         </div>
     )
 }
