@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Modal from "react-modal";
-
+import axios from "axios";
 
 
 
@@ -53,15 +53,31 @@ function Card( {productName, price, description, image}   ) {
 
    }
 
-   function onHandleSubmit(e){
+  async function onHandleSubmit(e){
        
     e.preventDefault();
 
     // gör en axios request 
     // 11.35 
+    console.log(formValues)
 
-    
+    console.log(Number(formValues.mobile)) 
+    try {
 
+        // om det är två ord 
+   const response=  await axios.post("http://localhost:1337/user-bookings", {
+        name:formValues.name,
+        timeToAppointment:formValues.timeToAppointment,
+        mobile:Number(formValues.mobile)
+    })
+
+  
+    console.log(response)
+}
+catch(error) {
+
+    console.log(error.data)
+}
    }
 
     return (
