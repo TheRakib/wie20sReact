@@ -1,9 +1,46 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Modal from "react-modal";
 
 
 
 
 function card( {productName, price, description, image}   ) {
+
+    const customStyles = {
+        content : {
+          top                   : '50%',
+          left                  : '50%',
+          right                 : 'auto',
+          bottom                : 'auto',
+          marginRight           : '-50%',
+          transform             : 'translate(-50%, -50%)'
+        }
+      };
+
+      // state
+    const [modalIsOpen,setIsOpen] = useState(false);
+
+
+    function openModal() {
+
+        setIsOpen(true)
+    }
+
+   function closeModal() {
+
+    setIsOpen(false)
+   }
+
+   //11.00 
+
+
+
+
+
+
+
+
+
     return (
         
         <>
@@ -33,7 +70,7 @@ function card( {productName, price, description, image}   ) {
         </div>
         <div className="flex item-center justify-between mt-3">
         <h1 className="text-gray-700 font-bold text-xl">{price}</h1>
-        <button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Add to Cart</button>
+        <button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">boka</button>
         </div>
         </div>
         </div>

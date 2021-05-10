@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, {useState} from 'react'
 
+
 function AddToCard() {
 
 
@@ -18,14 +19,22 @@ function AddToCard() {
     // state
 
     const [formValues , setFormValues] = useState(initialValues)
+    const [fileData, setFileData ]= useState();
+    
+ 
 
 
     // onhandlechange
+
+
 
     function handleOnchange(e) {
         setFormValues({...formValues, [e.target.name]:e.target.value})
       }
 
+      function handleOnchangePic(e) {
+         setFileData(e.target.files[0])
+      }
 
 
 
@@ -43,13 +52,33 @@ function onHandleSubmit(e) {
          price : formValues.price
      }).then(  (res)=> {
          console.log(res.data)
+        
+         const data = new FormData();
+         data.append("files" , fileData )
+         // vilken collection?  table
+         // vilken docs i collection?  table data
+         // vilken field i collection?  table data egenskaper 
+         data.append("ref", "product") // vilken collection skulle bilden tillhöra? 
+         
 
+         // vilken docs 
+
+         data.append("refId", res.data.id)
+
+         // vilken field ?
+         data.append("field", "img")
+
+        // axios for att ladda upp bilden i upload endpoint
+        
+        axios.post("http://localhost:1337/upload",  data)
+        .then( (image)=> console.log(image))
+        .catch( (error)=> console.log(error))
 
      }).catch(  (err)=> {
             console.log(err)
      })
 
-
+     // en till för bild 
 
 }
 
@@ -63,8 +92,6 @@ function onHandleSubmit(e) {
   <div className="max-w-md w-full space-y-8">
             <form  method="post" className="mt-8 space-y-6" onSubmit={onHandleSubmit}>
                
-
-
 
         <div>
           <label for="email-address" className="sr-only">Product Name </label>
@@ -83,6 +110,7 @@ function onHandleSubmit(e) {
         </div>
 
 
+       <input type="file" name="file" id="" onChange={handleOnchangePic}/>
 
   
      <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">  

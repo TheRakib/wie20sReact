@@ -1,0 +1,39 @@
+
+Idag: måndag den 10 maj:
+* add cardlist med image 
+
+** två endpoints: -> en för product och en för bild:-> 
+       
+                  
+                  -> mappa /referera  product och bild :-> 
+
+
+
+bild  - encoding -> lagrar bild -> decode -> läser bilden
+
+
+
+* boka -> mata in sina uppgifter , tid(modal) 
+
+pagination ? 10 bilder per gång till ex
+
+
+
+* Använd någon pagination bibliotek för att kunna visa data som kommer från strapi
+- 2 bilder per sida
+========
+freecodecamp: vanila js. (    )
+Varför? hur? 
+========
+
+
+-> tutorial hell?? 
+
+event(onclick, onchange, onsubmit ) och 
+api anropning(axios call till ex. axios.get/axios.post osv) : callback , promises , async await.
+
+
+
+-> checkout ->slutför bookning / betalning 
+** routing
+
