@@ -19,8 +19,12 @@ pagination ? 10 bilder per gång till ex
 
 
 
+Övningar: 
 * Använd någon pagination bibliotek för att kunna visa data som kommer från strapi
 - 2 bilder per sida
+* Separera modal i en egen fil 
+
+
 ========
 freecodecamp: vanila js. (    )
 Varför? hur? 
