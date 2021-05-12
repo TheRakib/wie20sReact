@@ -1,0 +1,30 @@
+
+===========
+
+* pagination:- 
+       
+        - 2 produkter per request
+        - load more 
+        - visa färre 
+
+// query string :-    object
+** sort=stock
+** image-size=small
+** image=stillLife
+** offset=0
+** page-size=180
+
+// query params:- variable
+
+** /product/id
+// 
+
+
+
+
+
+* refactoring code 
+* Relation i strapi 
+
+
+===========
