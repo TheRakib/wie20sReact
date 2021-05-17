@@ -6,6 +6,8 @@ import axios from "axios";
 
 function Card( {productName, price, description, image}   ) {
 
+
+  
     const customStyles = {
         content : {
           background: "gray",
@@ -71,7 +73,6 @@ function Card( {productName, price, description, image}   ) {
         mobile:Number(formValues.mobile)
     })
 
-  
     console.log(response)
 }
 catch(error) {

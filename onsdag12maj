@@ -14,6 +14,8 @@
 ** offset=0
 ** page-size=180
 
+via url :-  
+
 // query params:- variable
 
 ** /product/id
@@ -23,8 +25,34 @@
 
 
 
-* refactoring code 
-* Relation i strapi 
 
+
+* Relation i strapi :-
+
+
+      admin/vendor/säljäre    -> product/tjänst/booking   -> user
+
+      one to one , one to many , many to many ?: 
+
+
+      user ->  tjänst/booking 
+      booking/tjänst -> vendor/admin/sälare 
+
+
+Hem upgifterer:->
+   ** skapa en relation diagram . 
+   ** Extra om ni vill kan ni lägga till i strapi
+
+    -> content-type builder -> väljer man object -> add another field -->
+                        -> relation
+
+
+user    product  
+     
+  orderItem
+
+* refactoring code 
+
+// 11.00-12.00 handledning 
 
 ===========

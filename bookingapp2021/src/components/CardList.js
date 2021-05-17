@@ -44,6 +44,7 @@ function CardList() {
 
     // skriva visa färre function
     function showLess(){
+        setLoadPage(2)
 
     }
     return (
@@ -53,10 +54,7 @@ function CardList() {
                      <Card key={product.id} image={product.img}  productName={product.name}  price={product.price} description= {product.description} />
                  )
              }) }
-
- 
- 
- { (products.length >loadPage || products.length === loadPage)   ? 
+ {(products.length >loadPage || products.length === loadPage)   ? 
                <button onClick={loadMore}>Load more</button> 
                :
                <button onClick={showLess}>Show less</button> }
