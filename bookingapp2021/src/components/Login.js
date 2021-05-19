@@ -34,6 +34,7 @@ function handleOnchange(e) {
 
 
    function handleOnSubmit(e){
+    console.log(e.target.elements.password.value)
      e.preventDefault();
 
     // axios request till login sidan 
@@ -50,6 +51,7 @@ function handleOnchange(e) {
     //setJwt(response.data.jwt)
     // spara response.data.jwt i client sidan 
     localStorage.setItem("jwt", response.data.jwt);
+    localStorage.setItem("userInfo", response.data.user)
 
      //setUsername(response.data.user.username)
      

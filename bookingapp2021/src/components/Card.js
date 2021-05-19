@@ -4,7 +4,7 @@ import axios from "axios";
 
 
 
-function Card( {productName, price, description, image}   ) {
+function Card( {productId, productName, price, description, image}   ) {
 
 
   
@@ -37,7 +37,8 @@ function Card( {productName, price, description, image}   ) {
 
 
     function openModal() {
-
+        // if user is logged in setIsOpen to true 
+        // if not use another state for instance showLogin(true)
         setIsOpen(true)
     }
 
@@ -63,6 +64,9 @@ function Card( {productName, price, description, image}   ) {
     // 11.35 
     console.log(formValues)
 
+    // läsa data från localStorage 
+    // 
+
     console.log(Number(formValues.mobile)) 
     try {
 
@@ -70,7 +74,9 @@ function Card( {productName, price, description, image}   ) {
    const response=  await axios.post("http://localhost:1337/user-bookings", {
         name:formValues.name,
         timeToAppointment:formValues.timeToAppointment,
-        mobile:Number(formValues.mobile)
+        mobile:Number(formValues.mobile),
+        userId:"id på den user som har loggat in",
+        productId: productId
     })
 
     console.log(response)
@@ -84,6 +90,7 @@ catch(error) {
     return (
         
         <>
+     
         <div className="py-6 mx-6" >
         <div className="flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="w-1/3 bg-cover" > <img src={`http://localhost:1337${image.formats.small.url}`} alt="some image from database"/>

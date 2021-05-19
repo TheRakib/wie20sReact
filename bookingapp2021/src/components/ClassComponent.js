@@ -26,7 +26,6 @@ componentDidUpdate() {
 }
 
 componentWillUnmount() {
-    
 }
 
 

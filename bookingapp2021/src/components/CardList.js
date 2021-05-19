@@ -15,7 +15,7 @@ function CardList() {
 
 
      // useEffect för att kunna hämta data från database 
-    useEffect(()=>{ 
+useEffect(()=>{ 
    //console.log("from useEffect" , loadPage)
         const fecthProducts= async()=>{
         // query params/query string? 
@@ -26,6 +26,7 @@ function CardList() {
            setProducts(response.data)
 
         }
+        
         fecthProducts()
     }, [loadPage])
      // skriva load more function 
@@ -51,7 +52,7 @@ function CardList() {
         <div>
              {products.map((product)=>{
                  return (
-                     <Card key={product.id} image={product.img}  productName={product.name}  price={product.price} description= {product.description} />
+                     <Card key={product.id} productId={product.id} image={product.img}  productName={product.name}  price={product.price} description= {product.description} />
                  )
              }) }
  {(products.length >loadPage || products.length === loadPage)   ? 

@@ -1,0 +1,28 @@
+* Strapi entity/model relationship:- 
+
+
+
+
+* skriva in i databasen : 
+
+boka frisör -> 
+         Vilken av frisörna? (productId)
+
+        -> vem har bokat ? (Om användare har loggat in då vet vi userId.
+        
+                                   
+                                   
+                                     :- Unik Id npm i uuid??? )
+
+
+
+
+och läsa från databasen relaterat entity
+
+* upprepning inför provet
+
+12.00 
+
+
+** 13.00 - 14.00(30 minuter)
+

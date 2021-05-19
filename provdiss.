@@ -68,5 +68,46 @@ props ska inte ändras direct.
     <Nav>
 </Home>
 
-kl.10.00
+Inuti Home component måste vi lägga till 
+    {props.children}
 
+
+** {   expression ? <div> profile </div>: <div> Login </div>}
+
+{isLoggedIn ?  <div> profile </div>: <div> Login </div>}
+
+
+{user.status==="Admin" ?  <div> Admin profile </div>: <div> vanlig profile </div>}
+
+{isLoggedIn &&  <div> profile </div>}
+
+
+=============
+
+console.log(e.target.elements.email.value)
+console.log(e.target.elements.password.value)
+
+
+==============
+
+Ändrar du state renderas jsx igen/component igen. 
+
+
+==============
+
+Kl. 11.00 
+
+// module is not found 
+    npm i modulenamn
+
+
+module is not defined , Component is not defined 
+
+ import Component/module from "..."
+
+
+==============
+
+
+
+{/*   */}

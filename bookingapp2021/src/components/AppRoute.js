@@ -8,6 +8,7 @@ import Login from "./Login";
 import AddToCard from "./AddToCard";
 import ForgotPassword from "./Forgot-password";
 import ResetPassword from "./Reset-Password"
+import Parent from "./Parent"
 //import Upload from "./UploadFile";
 
 
@@ -35,6 +36,7 @@ export default function AppRoute(){
            <Route path="/form" component={AddToCard} />
            <Route path="/reset-password" component= {ResetPassword} />
            <Route path="/forgot-password" component= {ForgotPassword} />
+           <Route path="/parent" component= {Parent} />
          {/*   <Route path="/upload" component={Upload} /> */}
            </Switch>
         </Router>
