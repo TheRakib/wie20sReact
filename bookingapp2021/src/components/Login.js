@@ -51,12 +51,12 @@ function handleOnchange(e) {
     //setJwt(response.data.jwt)
     // spara response.data.jwt i client sidan 
     localStorage.setItem("jwt", response.data.jwt);
-    localStorage.setItem("userInfo", response.data.user)
-
+    localStorage.setItem("userId", response.data.user.id)
+    localStorage.setItem("userEmail", response.data.user.email)
      //setUsername(response.data.user.username)
      
-    history.push("/card")
-    window.location.reload();
+   history.push("/card")
+  window.location.reload();
 
     //const JWT= localStorage.getItem("jwt")
     //console.log(testJWT)

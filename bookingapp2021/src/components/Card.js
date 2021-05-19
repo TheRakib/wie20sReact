@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Modal from "react-modal";
 import axios from "axios";
 
@@ -34,7 +34,21 @@ function Card( {productId, productName, price, description, image}   ) {
       // state
     const [modalIsOpen,setIsOpen] = useState(false);
     const [formValues, setFormValues] = useState(initialValues)
+    const [userId, setUserId] = useState(null)
 
+
+
+
+
+    useEffect(()=>{
+        
+        // läser data från localstorage
+        const userId = localStorage.getItem("userId")
+        //console.log(userId)
+        //uppdaterar state
+        setUserId(userId)
+ 
+       }, [])
 
     function openModal() {
         // if user is logged in setIsOpen to true 
@@ -62,12 +76,12 @@ function Card( {productId, productName, price, description, image}   ) {
 
     // gör en axios request 
     // 11.35 
-    console.log(formValues)
+    //console.log(formValues)
 
     // läsa data från localStorage 
     // 
 
-    console.log(Number(formValues.mobile)) 
+   // console.log(Number(formValues.mobile)) 
     try {
 
         // om det är två ord 
@@ -75,15 +89,17 @@ function Card( {productId, productName, price, description, image}   ) {
         name:formValues.name,
         timeToAppointment:formValues.timeToAppointment,
         mobile:Number(formValues.mobile),
-        userId:"id på den user som har loggat in",
-        productId: productId
+        
+        //userId kommer från state som uppdateras av localstorage i useEffect
+       // userId: 14,
+       // productId: 1
     })
 
     console.log(response)
 }
 catch(error) {
 
-    console.log(error.data)
+    console.log(error)
 }
    }
 
