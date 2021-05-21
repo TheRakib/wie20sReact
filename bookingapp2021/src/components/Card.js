@@ -89,6 +89,8 @@ function Card( {productId, productName, price, description, image}   ) {
         name:formValues.name,
         timeToAppointment:formValues.timeToAppointment,
         mobile:Number(formValues.mobile),
+        // koppla username 
+        users_permissions_user:"Rakib"
         
         //userId kommer från state som uppdateras av localstorage i useEffect
        // userId: 14,

@@ -1,0 +1,18 @@
+** Mina bookningar / mina orderar 
+
+    - Skapa en relation mellan user och userbookings 
+    - läser in data med filtering   (where clause , api filtering dvs query string)
+
+
+** Läser in user info vid inloggning , User Id och spara detta i localstrorage 
+** läser in user info  från localstrorage
+** useEffect , api request med query string
+** Vi skapar och uppdaterar ett state med data som vi har läst in från application
+** Looper igenom state som har api data/mina bookingar
+
+
+
+** Privatisera content i app
+
+** prov 
+

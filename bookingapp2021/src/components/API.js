@@ -6,7 +6,7 @@ import axios from "axios";
 // npm : npm i axios 
 function  API () {
 
-    //const [data , setData ] = useState({});
+    const [data , setData ] = useState([]);
     
     useEffect(()=>{
          const fetchData = async()=> {
@@ -14,12 +14,16 @@ function  API () {
             try {
 
                 // anropa user-bookings  axios.get("http://localhost:1337/user-bookings"
+
+                
          const response=   await axios.get("http://localhost:1337/user-bookings?users_permissions_user.id=14")
           // axios är ett fetch bibliotek , http get, post, update , delete  
           console.log(response.data)
           const res = response.data 
           // json.string
-         // setData(res)
+          setData(res)
+
+         
         }
     
     catch(err) {
@@ -53,8 +57,7 @@ function  API () {
     return (
     <>
     data kommer att kunna skriva ut här:-  
-   
-
+    {data.map(  e=> <div> {e.name} </div>)}
     <div> Hello from api </div> 
     </>
     

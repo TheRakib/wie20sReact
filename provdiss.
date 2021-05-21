@@ -71,6 +71,8 @@ props ska inte ändras direct.
 Inuti Home component måste vi lägga till 
     {props.children}
 
+    <Home>  <Card/> </home>
+
 
 ** {   expression ? <div> profile </div>: <div> Login </div>}
 

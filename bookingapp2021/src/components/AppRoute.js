@@ -10,6 +10,7 @@ import ForgotPassword from "./Forgot-password";
 import ResetPassword from "./Reset-Password"
 import Parent from "./Parent"
 import API from "./API"
+import MinaBookingar from "./MinaBookningar"
 //import Upload from "./UploadFile";
 
 
@@ -30,7 +31,7 @@ export default function AppRoute(){
               
            <Menu />
           <Switch>
-            <Route path="/" exact component={CardList} />
+           <Route path="/" exact component={CardList} />
            <Route path="/card" exact component={CardList} />
            <Route path="/login" component= {Login} />
            <Route path="/register" component={Registration} />
@@ -38,6 +39,7 @@ export default function AppRoute(){
            <Route path="/reset-password" component= {ResetPassword} />
            <Route path="/forgot-password" component= {ForgotPassword} />
            <Route path="/parent" component= {Parent} />
+           <Route path="/bookningar" component={MinaBookingar} /> 
            <Route path="/API" component={API} /> 
            </Switch>
         </Router>
