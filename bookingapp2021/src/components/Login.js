@@ -52,8 +52,10 @@ function handleOnchange(e) {
     // spara response.data.jwt i client sidan 
     localStorage.setItem("jwt", response.data.jwt);
     localStorage.setItem("userId", response.data.user.id)
-    localStorage.setItem("userEmail", response.data.user.email)
+    localStorage.setItem("username", response.data.user.username)
      //setUsername(response.data.user.username)
+
+     // user.admin=true
      
    history.push("/card")
   window.location.reload();

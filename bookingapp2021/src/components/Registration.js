@@ -36,7 +36,7 @@ function handleOnSubmit(e) {
       axios.post('http://localhost:1337/auth/local/register', {
                 username: registerValues.username,
                 email: registerValues.email,
-                password: registerValues.password,
+                password: registerValues.password
             })
             .then( (e)=> {  
                 

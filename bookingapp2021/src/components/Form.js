@@ -3,6 +3,8 @@ import React, {useState} from 'react'
 
 const isAdmin=true;
 
+// const [isAdmin, setIsAdmin]= useState(...)
+
 function Form() {
 
 

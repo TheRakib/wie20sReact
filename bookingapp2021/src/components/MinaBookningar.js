@@ -6,7 +6,7 @@ function MinaBookningar() {
 
 const [bookings, setBookings] = useState([])
 const [userId, setUserId] = useState(localStorage.getItem("userId"))
-
+const [token, setToken] = useState(localStorage.getItem("jwt"))
 
 useEffect(()=>{
   
@@ -17,7 +17,12 @@ useEffect(()=>{
    console.log(userId)
 
    const fetchData = async ()=>{
-        const res = await axios.get(`http://localhost:1337/user-bookings?users_permissions_user.id=${userId}`)
+        const res = await axios.get(`http://localhost:1337/user-bookings?users_permissions_user.id=${userId}`
+        , {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            }
+        })
 
         setBookings(res.data)
    }

@@ -5,6 +5,9 @@ import {Link } from "react-router-dom";
 function Menu() {
 const [jwt, setJwt] = useState(null);
 
+const [isAdmin, setIsAdmin]= useState(false);
+const [token , setToken ]= useState(localStorage.getItem("jwt"))
+
 // hooks -> life cycle method,  en component anropning-> render (JSX)  -> ComponentDidMount
 
 // varje gång din state uppdateras , uppdaterar din component/jsx
@@ -43,7 +46,8 @@ return (
            
             <Link to="/card" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Cardlist</Link>
 
-            <Link to="/form" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Form</Link>
+{  isAdmin && token?  <Link to="/form" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Form</Link> :<> </>}
+           
             
             <Link to="/bookningar" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mina bookningar</Link>
             {/* <Link to="/logout" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">logout</Link>
@@ -74,7 +78,7 @@ return (
       
        <Link to="/" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Cardlist</Link>
 
-       <Link to="/form" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Form</Link>
+ {isAdmin && token?    <Link to="/form" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Form</Link>: <> </>}
 
        <Link to="/login" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</Link>
 
