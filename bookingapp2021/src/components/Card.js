@@ -116,6 +116,14 @@ catch(error) {
 }
    }
 
+
+ function  deleteCard() {
+    
+
+    // axios.delete("http://localhost:1337/product/2", {headers: {}})
+
+ }
+
     return (
         
         <>
@@ -147,7 +155,7 @@ catch(error) {
         <div className="flex item-center justify-between mt-3">
         <h1 className="text-gray-700 font-bold text-xl">{price}</h1>
         <button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" onClick={openModal} >boka</button>
-
+        <button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded" onClick={deleteCard} >Delete</button>
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
