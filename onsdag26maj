@@ -1,0 +1,49 @@
+* Tredjeparts System:-
+     Mob/par programmering 
+     - Payment ( Tredjeparts tjänst ) Stripe, klarna, payer
+            via tjänsterna. Per transaction 
+
+
+
+     - Deployment :-  
+     Strapi och react
+      
+        Server- Database server, application server  
+        Dynos/Datorer(AWS EC2) - Heroku  :- application server. 
+
+      Pipeline:-   CI/CD pipeline. Continueous Integration och Deployment   
+    
+     - Email server  :- Email server tjänster : - Sendgrid , SES , emailjs
+
+
+     - API :-  application programming interface 
+
+        axios. http request som get, post , put , Delete
+        
+        Vem som skickar request : credentials , access key , secret keys
+
+      - Authentication:   401 
+       och Authorisation: 403 
+
+      - server problem :- 500 error : 
+      https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+
+     - Implementera 3rd parts tjänster så som Firebase :- 
+     
+       backend as a service: olika api endpoints 
+              (/hämta producter, lägga till produkter, ändra produkter, radera produkter ) 
+       Database, 
+       File Bucket 
+
+23 augusti.  30p
+==============
+============== 
+2 veckors extra kursensplan  
+    23 aug:-  Redux, TypeScript , samt  upprepning om hela  projektet , Vanila javascript
+
+
+
+
+* Handledning för Reacts sista inlämning(2): klar inlämning 1, 2  och klar med provet  
+   System Utvecklingsramverk 30p  // 

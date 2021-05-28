@@ -1,0 +1,36 @@
+// npm install dotenv
+import dotenv from 'dotenv'
+
+import firebase from "firebase/app";
+
+dotenv.config();
+
+
+console.log(process.env.REACT_AUTHDOMAIN)
+// process.env
+
+//  firebase 
+
+
+
+
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey:  "AIzaSyDNWeNEF02bZ8WD4yJLfJnziMyvEWi8rlY",
+    authDomain: "wie20s-46b8b.firebaseapp.com",
+    projectId:"wie20s-46b8b",
+    storageBucket: "wie20s-46b8b.appspot.com",
+    messagingSenderId: "461798086823",
+    appId: "1:461798086823:web:3590d97ec61f1214a16382",
+    measurementId: "G-X1Q5W28HKF"
+  };
+  
+
+
+  // Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+  // hur kan vi skydda de api keys?
+    // gitignore , separat fil med apikeys :- .env
+
+    //10.00 

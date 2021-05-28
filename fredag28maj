@@ -1,0 +1,23 @@
+
+
+* Firebase integration :- 
+https://console.firebase.google.com/u/0/
+
+       * SDK : Software developer kit?? 
+       code , setup för att kunna integrera din app med sdk provider
+    
+       Codebase och ni kommer att lägga till kodbasen i ert project.
+
+
+
+
+       configfile : finnas alla firebase sdk info
+
+
+      vs API :Application programming interface??
+          secret key och access key
+
+      axios.get( http://somewebapp/api/createAccount , {headers: "secret keys}"
+* Stripe 
+
+
