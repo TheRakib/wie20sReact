@@ -34,3 +34,7 @@ firebase.initializeApp(firebaseConfig);
     // gitignore , separat fil med apikeys :- .env
 
     //10.00 
+
+    // 11.00
+
+    // vi kommer att läsa data från firebase 
