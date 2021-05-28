@@ -1,7 +1,7 @@
 // npm install dotenv
 import dotenv from 'dotenv'
 
-import firebase from "firebase/app";
+import firebase from "firebase";
 
 dotenv.config();
 
@@ -29,7 +29,16 @@ const firebaseConfig = {
 
 
   // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const firebaseApp= firebase.initializeApp(firebaseConfig);
+
+
+// console log firebaseApp 
+
+const firestore = firebaseApp.firestore()
+
+
+export default firestore;
+
   // hur kan vi skydda de api keys?
     // gitignore , separat fil med apikeys :- .env
 
