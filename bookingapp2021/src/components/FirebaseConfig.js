@@ -34,7 +34,9 @@ const firebaseApp= firebase.initializeApp(firebaseConfig);
 
 // console log firebaseApp 
 
-const firestore = firebaseApp.firestore()
+const firestore = firebaseApp.firestore()  // firebase firestore
+
+ 
 
 
 export default firestore;

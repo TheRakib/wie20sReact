@@ -1,0 +1,35 @@
+* Upprepning firebase/SDK 
+       - Kommandoverktyg/global paket ,  Local paket  :- -g firebase-tools, firebase
+       - SDK config code 
+       - Initiera kopplingen med paket till ex. firebase och SDK config code
+
+
+// unduser auth , oauth   // 10m
+// bookningsinformation    // 100m firebase
+
+// allt med admin in i strapi 
+    
+// firebase (SDK) , strapi, Stripe 
+
+
+* Http :-  
+      
+      get , 
+      post , 
+      put, 
+      delete 
+
+
+
+request ---> js object --->  JSON format data
+              js object <---JSON format data     <--- Middleware    <---   Response 
+    status code, response data/error data.
+
+kl.10.00
+===========================================
+
+
+
+* Rest api :-
+
+* SDK vs Rest API , min frontend app -> Extern kod/microservice/backend    ->  Stripe API
