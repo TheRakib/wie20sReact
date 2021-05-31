@@ -39,7 +39,7 @@ useEffect(()=>{
 {bookings.map( (booking)=>{
     
     return(
-    <Booking key={booking.id} name={booking.name} time={booking.timeToAppointment} />
+    <Booking key={booking.id} name={booking.name} time={booking.timeToAppointment} price={100} />
     )
 })
 }

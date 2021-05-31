@@ -25,11 +25,24 @@ request ---> js object --->  JSON format data
               js object <---JSON format data     <--- Middleware    <---   Response 
     status code, response data/error data.
 
-kl.10.00
+ 
+
+axios.get("http://domain.com/api/data/1", { headers: {authentication: "API- keys "}})
+
 ===========================================
 
+* Rest api :- Likadant som HTTP
 
 
-* Rest api :-
 
-* SDK vs Rest API , min frontend app -> Extern kod/microservice/backend    ->  Stripe API
+* SDK vs Rest API 
+
+*  min frontend app -> Extern kod/microservice/backend    ->  Stripe API
+
+     products info: price , name, description osv. -> Checkout request till -> tar emot data- billed- Stripe API 
+                                                                        <- yes , no
+
+                                    Yes:- Success page, Mail server (skickar success meddelande till kunden)
+                                    No:-  Prova om 
+    
+    Registera er på stripe hemsidan/ developer konto. 
