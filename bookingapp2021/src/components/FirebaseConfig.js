@@ -6,7 +6,7 @@ import firebase from "firebase";
 dotenv.config();
 
 
-console.log(process.env.REACT_AUTHDOMAIN)
+console.log(process.env.REACT_APP_API_KEY)
 // process.env
 
 //  firebase 

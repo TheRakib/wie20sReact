@@ -3,13 +3,13 @@
 
 const express = require('express');
 //Skriv detta i terminalen : npm install body-parser 
-
+require("dotenv").config()
 const bodyParser = require('body-parser')
 //http://expressjs.com/en/resources/middleware/body-parser.html
 const app = express();
 const cors = require("cors");
 
-const stripe = require('stripe')('sk_test_51Ix6UrF51NUoOGwBNqtFsnzuLhQ207pYXelVmU2E7Vpi5RRgpVg2q2qXrVk2aYiJw8uYUEBcoyxKl80fijhQLh3m00vnKV9Q5E')
+const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 
 app.use(cors())
 //json hantera
@@ -33,16 +33,18 @@ console.log("req body" , req.body)
 // req.body 
 
 
+
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: [
       {
         price_data: {
-          currency: 'usd',
+          currency: 'gbp',
           product_data: {
             name: req.body.name,
           },
-          unit_amount: req.body.price,
+          //Number ((9.99 * 100).toFixed(2))
+          unit_amount: req.body.price*100 ,
         },
         quantity: 1,
       },
@@ -52,7 +54,7 @@ console.log("req body" , req.body)
     cancel_url: 'http://localhost:4242/cancel.html',
   });
 
-  res.json({ id: session.id });
+  res.json({ id: session.id});
 });
 
 app.listen(4242, () => console.log(`Listening on port ${4242}!`));
