@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Modal from "react-modal";
 import axios from "axios";
 
-import firestore from "./FirebaseConfig";
+import firestore from "../FirebaseConfig";
 
 
 function Card( {productId, productName, price, description, image}   ) {

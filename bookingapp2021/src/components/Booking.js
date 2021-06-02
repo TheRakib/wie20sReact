@@ -7,7 +7,7 @@ import  axios from "axios"
 const stripePromise = loadStripe('pk_test_51Ix6UrF51NUoOGwBeJKofEacEehk3bci5bhtgPYZBjo4D7FzQbAfxiAMkQvr7w1odNcyvmpiE16rlqUVuOvNflwR00qtJcp5GI');
 function Booking({name, time, price}) {
 
-//
+//11.40
 
 const handleClick = async (event) => {
     // Get Stripe.js instance

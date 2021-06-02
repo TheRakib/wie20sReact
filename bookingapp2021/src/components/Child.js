@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
-import firestore from "./FirebaseConfig";
+import firestore from "../FirebaseConfig";
 
 
 import dotenv from 'dotenv'

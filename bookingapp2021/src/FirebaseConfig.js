@@ -6,23 +6,21 @@ import firebase from "firebase";
 dotenv.config();
 
 
-console.log(process.env.REACT_APP_API_KEY)
-// process.env
 
 //  firebase 
 
 
-
+console.log(process.env.REACT_APP_API_KEY)
 
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey:  "AIzaSyDNWeNEF02bZ8WD4yJLfJnziMyvEWi8rlY",
-    authDomain: "wie20s-46b8b.firebaseapp.com",
-    projectId:"wie20s-46b8b",
-    storageBucket: "wie20s-46b8b.appspot.com",
+    apiKey:  process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTHDOMAIN,
+    projectId:process.env.REACT_APP_PROJECTID,
+    storageBucket: process.env.REACT_APP_STORAGEBUCKET,
     messagingSenderId: "461798086823",
-    appId: "1:461798086823:web:3590d97ec61f1214a16382",
+    appId: process.env.REACT_APP_APPID,
     measurementId: "G-X1Q5W28HKF"
   };
   
