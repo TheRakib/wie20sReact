@@ -14,7 +14,7 @@ const handleClick = async (event) => {
     const stripe = await stripePromise;
 
     // Call your backend to create the Checkout Session
-    const response = await axios.post("http://localhost:4242/create-checkout-session")
+    const response = await axios.post("http://localhost:4242/create-checkout-session", {name:name,price:price})
     //('/create-checkout-session', { method: 'POST' });
 
     console.log(response)

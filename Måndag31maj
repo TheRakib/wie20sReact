@@ -46,3 +46,7 @@ axios.get("http://domain.com/api/data/1", { headers: {authentication: "API- keys
                                     No:-  Prova om 
     
     Registera er på stripe hemsidan/ developer konto. 
+
+
+
+    react server localhost:3000  --- (Middleware cors ) ---  stripe server localhost:4242

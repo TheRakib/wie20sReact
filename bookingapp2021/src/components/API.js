@@ -13,7 +13,7 @@ function  API () {
 
             try {
 
-                // anropa user-bookings  axios.get("http://localhost:1337/user-bookings"
+          // anropa user-bookings  axios.get("http://localhost:1337/user-bookings"
 
                 
          const response=   await axios.get("http://localhost:1337/user-bookings?users_permissions_user.id=14")
