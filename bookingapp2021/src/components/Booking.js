@@ -12,9 +12,11 @@ function Booking({name, time, price}) {
 const handleClick = async (event) => {
     // Get Stripe.js instance
     const stripe = await stripePromise;
-
+    const quantity = 3; // state /props 
     // Call your backend to create the Checkout Session
-    const response = await axios.post("http://localhost:4242/create-checkout-session", {name:name,price:price})
+
+    // konsumerar / request 
+    const response = await axios.post("http://localhost:4242/create-checkout-session", {name:name,price:price, quantity:quantity})
     //('/create-checkout-session', { method: 'POST' });
 
     console.log(response)
@@ -40,7 +42,7 @@ const handleClick = async (event) => {
           <li> name: {name}</li> 
            <li>time : {time}  </li> 
            <li>price: {price }</li>
-
+    
 
 <h1> Betala nu?</h1>
 
