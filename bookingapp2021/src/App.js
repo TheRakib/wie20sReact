@@ -1,8 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 import AppRoute from "./components/AppRoute";
-import API from "./components/API";
-import fire from "./assets/fire.jpg";
+
 
 
 
@@ -13,16 +12,24 @@ import fire from "./assets/fire.jpg";
 
 function App() {
 
+//const [state, setState] = useState("")
+ // state 
 
+//function för att kunna skriva logik
+
+//JSX : javascript xml ,
   return (
-    <div className="App"   >
+    <div>
        
-    
-
-  <AppRoute/>
+     <AppRoute> </AppRoute>
       
+      
+
     </div>
+   
   );
 }
 
 export default App;
+
+

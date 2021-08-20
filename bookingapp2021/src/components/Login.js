@@ -58,7 +58,7 @@ function handleOnchange(e) {
      // user.admin=true
      
    history.push("/card")
-  window.location.reload();
+   window.location.reload();
 
     //const JWT= localStorage.getItem("jwt")
     //console.log(testJWT)
@@ -95,7 +95,10 @@ function handleOnchange(e) {
       <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
         Sign in to your account
       </h2>
+      
       <h1>{error}</h1>
+
+      
     <form className="mt-8 space-y-6" onSubmit={handleOnSubmit}  method="POST">
       <input type="hidden" name="remember" value="true"/>
       <div className="rounded-md shadow-sm -space-y-px">

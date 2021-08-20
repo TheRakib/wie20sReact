@@ -23,7 +23,7 @@ function  API () {
           // json.string
           setData(res)
 
-         
+
         }
     
     catch(err) {

@@ -2,7 +2,14 @@ import React, {useState, useEffect} from 'react';
 import Modal from "react-modal";
 import axios from "axios";
 
-import firestore from "../FirebaseConfig";
+//import firestore from "../FirebaseConfig";
+
+
+// CMS : for admin användare : - > heroku -> lägga mer resurser  
+
+
+//managed services:- 
+// firebase : for client användare , login, oauth, booking info, firebase storage for bilder. 
 
 
 function Card( {productId, productName, price, description, image}   ) {

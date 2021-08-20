@@ -1,0 +1,69 @@
+===
+
+Heroku : 
+   Steg 1:- install heroku cli i globalt  (så att jag kan använda heroku cmd i min terminal)
+    
+   Steg 2:- cd till din app och skriv : Heroku login i terminal  
+
+            - Ladda ner google authenticator 
+            - man blir loggat in 
+
+   Steg 3: se till att du är in i din app som du vill Deploya och skriv i terminal:
+
+            - Heroku create
+
+ 
+
+   Steg 4: fix git: git init 
+                    git add .
+                    git commit -m "heroku"
+                    git push heroku master
+
+
+   Steg 5: Fix env variables 
+
+  Build:- 
+
+  """ 
+
+Ifall ni ändrar app eller ta bort app och skapa nya app: 
+ Steg 1: git remote remove heroku.
+ Steg 2: heroku git:remote -a bookingapp2021
+
+
+
+cd gå till den projekt du vill Deploya.
+git init
+heroku create
+git add .
+git commit -m "react-create-app on Heroku"
+git push heroku master
+
+
+heroku open
+
+
+"""
+
+================================
+React app (client ):- Netlify/heroku
+
+Stripe-server(payment server/backend):- Heroku/någon vendor där behövs inte kreditkort
+Strapi(cms /backend):- Heroku/någon vendor där behövs inte kreditkort
+
+=================================
+kl.13.00
+
+* Deploya react app
+* Deploya node js appar (stripe-server)
+* Deploya strapi
+* Upprepning
+
+
+================================
+
+
+Firebase (managed services, no need to manage servers) serverless 
+
+och Heroku :- ?? React , Node apparna , PHP appar , Strapi 
+

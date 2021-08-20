@@ -60,6 +60,7 @@ function setFirebaseCollection(){
 
 
             <button onClick={setFirebaseCollection}> Skriva in i firebase </button>
+            
         </div>
     )
 }

@@ -2,11 +2,11 @@
 // Watch this video to get started: https://youtu.be/rPR2aJ6XnAc.
 
 const express = require('express');
-
 const app = express();
 
-//provider
 
+
+//provider
 const cors = require("cors");
 const bodyParser = require('body-parser')
 
@@ -44,6 +44,10 @@ app.use(bodyParser.json())
 // http://localhost:4242/create-checkout-session
 
 //const response = axios.get(http://localhost:4242/get-data)
+
+app.get("/", (req, res)=> {
+  res.send("it works")
+})
 app.get("/get-data", (req,res)=>{
 
   console.log("vi har triggat den här endpoints");
@@ -51,6 +55,7 @@ app.get("/get-data", (req,res)=>{
   res.send("Tack för du har skickat request")
 
 })
+
 app.post('/create-checkout-session', async (req, res) => {  
 // request from frontend hanteras här. 
 
@@ -59,14 +64,12 @@ console.log("req body" , req.body)
 // req.body 
 
 //business logik 
-
-
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     line_items: [
       {
         price_data: {
-          currency: 'gbp',
+          currency: 'sek',
           product_data: {
             name: req.body.name,
           },
@@ -84,6 +87,24 @@ console.log("req body" , req.body)
   res.json({ id: session.id});
 });
 
-app.listen(4242 || process.env.PORT, () => console.log(`Listening on port ${4242}!`));
+app.listen( process.env.PORT || 4242 , () => console.log(`Listening on port ${4242}!`));
 
 // http://localhost:4242
+
+
+// separera projektet
+
+// git init
+
+// glöm inte .gitignore och lägga till .env filen
+
+// git add .
+// git commit -m " msg"
+
+// heroku create din-app-namn (brukar vara unika namn)
+
+// git push din repo och sedan koppla detta till heroku 
+
+      //alternative git push heroku master
+
+  //Glöm inte env var ska läggas i heroku 

@@ -1,0 +1,48 @@
+* upprepning hooks
+* useContext
+
+
+När man skapar Provider, createContext : 
+Steg 1: createContext med storBokstav Variable till ex. Context
+Steg 2: GE värdet till  Context.Provider
+           <Context.Provider value="Vad som helst value. Value kan komma från också State"> 
+           </Context.Provider>
+Steg 3: Exportetar man Variable/createContext till ex. Context 
+
+
+När man konsumerar/använder: 
+Steg 1: useContext med expoterat Context 
+till ex.   // useContext(UserContext)
+till ex.
+    const hello= useContext(UserContext)
+
+useContext(Context) returnerar de värdet som provider matat in 
+
+alt. 
+          <UserContext.Consumer>
+              {value=> <div> this the value from comsumer {value}</div>}
+          </UserContext.Consumer>
+            
+
+
+
+kl. 11.05
+
+* Deployement with heroku, netlify with 
+        github CI :  , CD 
+
+        code från localhost -> github -> tar in så snart nya kod kommer in i repo/branch.  Deployement 
+
+xFeatures branch -> Staging->  main/master -> production 
+
+***  ha en mapp/projekt mapp för Deployement
+* Handledning grupparbete
+
+Deployement: 
+När ni ska deploya i heroku: 
+  * tänk på env variablerna 
+  * Create react build pack  :https://github.com/mars/create-react-app-buildpack
+
+
+När ni använder netlify: 
+   * ta bort alla oanvända variablerna

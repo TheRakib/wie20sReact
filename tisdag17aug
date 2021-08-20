@@ -1,0 +1,66 @@
+
+
+Upprepning: 
+* jsx: 
+
+return (
+    <>
+    
+     <div>    {} </div>
+     <div>    {} </div>
+
+    </>
+)
+
+
+// vi kommer tillbaka 9.30
+
+* props: 
+mata in dynamisk data till template/component 
+//Tillbaka 10.00
+
+
+* State:
+
+// 
+
+* hooks
+https://www.freecodecamp.org/news/react-hooks-cheatsheet/#1-usestate-hook
+
+* formulär:
+
+// 10.30 
+* events:
+
+
+children props: 
+
+function Card({children}) {
+    return(
+        <div>
+          {children}
+        </div>
+    )
+}
+
+om vi vill skriva ut annan react component måste vi använda {children}
+
+<Card> <Header/> </Card>
+
+
+
+* code review :
+
+
+strapi -> react/frontend app ->firebase
+
+kl.11.00
+
+
+//kl. 11.30 
+ 
+
+
+// SDK 
+// API
+

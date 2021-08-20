@@ -3,7 +3,7 @@ import React from 'react'
 function BarnBarn() {
     return (
         <div>
-            This is 🚸 
+            This is children component
         </div>
     )
 }

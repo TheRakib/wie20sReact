@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+
+
+// npm i @stripe/stripe-js
 import { loadStripe } from '@stripe/stripe-js';
+
+
 // Make sure to call `loadStripe` outside of a component’s render to avoid
 // recreating the `Stripe` object on every render.
 import  axios from "axios"
-
 const stripePromise = loadStripe('pk_test_51Ix6UrF51NUoOGwBeJKofEacEehk3bci5bhtgPYZBjo4D7FzQbAfxiAMkQvr7w1odNcyvmpiE16rlqUVuOvNflwR00qtJcp5GI');
+
+
 function Booking({name, time, price}) {
 
 //11.40
@@ -42,6 +48,8 @@ const handleClick = async (event) => {
           <li> name: {name}</li> 
            <li>time : {time}  </li> 
            <li>price: {price }</li>
+
+           
     
 
 <h1> Betala nu?</h1>

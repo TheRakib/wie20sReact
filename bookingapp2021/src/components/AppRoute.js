@@ -1,6 +1,6 @@
 import React from "react";
 import CardList from "./CardList";
-import Form from "./Form";
+//import Form from "./Form";
 import Menu from "./Menu";
 import Registration from "./Registration";
 import Login from "./Login";
@@ -14,25 +14,35 @@ import MinaBookingar from "./MinaBookningar"
 //import Upload from "./UploadFile";
 
 
+// npm i react-router-dom
+
+ //import Root from "react-router-dom";
+
 import {Route, BrowserRouter as Router, Switch} from "react-router-dom"
 // react-router-dom ?? 
+//https://reactrouter.com/web/guides/quick-start
 
+//https://reactrouter.com/web/api/Hooks/usehistory 
 // yarn add react-router-dom
 
+
+// index.js -> App.js -> AppRoute.js -> path till alla componenter samt menu
+
+
+// localhost:3000 /
+// localhost:3000/login
 export default function AppRoute(){
 
     return(
 
         <>
-    
-        
 
-        <Router>  
-              
+
+    <Router>       
            <Menu />
-          <Switch>
+        <Switch>
            <Route path="/" exact component={CardList} />
-           <Route path="/card" exact component={CardList} />
+           <Route path="/card" component={CardList} />
            <Route path="/login" component= {Login} />
            <Route path="/register" component={Registration} />
            <Route path="/form" component={AddToCard} />
@@ -41,8 +51,8 @@ export default function AppRoute(){
            <Route path="/parent" component= {Parent} />
            <Route path="/bookningar" component={MinaBookingar} /> 
            <Route path="/API" component={API} /> 
-           </Switch>
-        </Router>
+        </Switch>
+    </Router>
            
            
            
@@ -51,3 +61,5 @@ export default function AppRoute(){
 }
 
 // kl. 11.00
+
+

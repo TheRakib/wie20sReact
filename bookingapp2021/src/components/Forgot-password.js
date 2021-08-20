@@ -2,6 +2,9 @@ import React from 'react'
 import axios from 'axios';
 
 
+
+// email server 
+
 function ForgotPassword() {
 
 function resetRequest() {
@@ -32,6 +35,9 @@ function resetRequest() {
           
         </div>
     )
+
 }
 
+// link:/token
+// input fält -> nya lösenord till databasen 
 export default ForgotPassword

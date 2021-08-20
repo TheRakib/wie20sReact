@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 
 import firebase from "firebase";
 
+//  third party js boken
+
 dotenv.config();
 
 
@@ -24,6 +26,7 @@ const firebaseConfig = {
     measurementId: "G-X1Q5W28HKF"
   };
   
+  //kl. 10.00
 
 
   // Initialize Firebase
@@ -33,6 +36,8 @@ const firebaseApp= firebase.initializeApp(firebaseConfig);
 // console log firebaseApp 
 
 const firestore = firebaseApp.firestore()  // firebase firestore
+
+const storage = firebaseApp.storage()
 
  
 

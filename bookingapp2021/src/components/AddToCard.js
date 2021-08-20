@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, {useState} from 'react'
-
+import { strapihost } from './config';
 
 function AddToCard() {
 
@@ -19,6 +19,9 @@ function AddToCard() {
     // state
 
     const [formValues , setFormValues] = useState(initialValues)
+
+
+    //bilder
     const [fileData, setFileData ]= useState();
     
  
@@ -46,25 +49,20 @@ function onHandleSubmit(e) {
 
      // api post request 
 
-     axios.post("http://localhost:1337/products", {
+     axios.post(strapihost, {
          name:formValues.name, 
          description:formValues.description,
          price : formValues.price
      }).then(  (res)=> {
          console.log(res.data)
-        
          const data = new FormData();
          data.append("files" , fileData )
          // vilken collection?  table
          // vilken docs i collection?  table data
          // vilken field i collection?  table data egenskaper 
          data.append("ref", "product") // vilken collection skulle bilden tillhöra? 
-         
-
-         // vilken docs 
-
+        // vilken docs 
          data.append("refId", res.data.id)
-
          // vilken field ?
          data.append("field", "img")
 

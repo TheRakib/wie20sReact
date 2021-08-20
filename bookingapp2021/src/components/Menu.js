@@ -1,11 +1,17 @@
-import React , {useState, useEffect}from 'react';
-import {Link } from "react-router-dom";
+import React , {useState, useEffect}from 'react'; //Hooks
+import {Link } from "react-router-dom";  // Link är som a tag
 
 //jsonwebtoken
 function Menu() {
-const [jwt, setJwt] = useState(null);
 
-const [isAdmin, setIsAdmin]= useState(false);
+  // const [state, setState] useState("")
+const [jwt, setJwt] = useState(localStorage.getItem("jwt"));
+
+
+
+
+const [isAdmin, setIsAdmin]= useState(localStorage.getItem("isAdmin"));
+
 const [token , setToken ]= useState(localStorage.getItem("jwt"))
 
 // hooks -> life cycle method,  en component anropning-> render (JSX)  -> ComponentDidMount
@@ -20,13 +26,13 @@ useEffect(()=>{
    //return ()=>  fun(); 
   },  [])
 
+//
 
 function clearLocalStorage() {
   localStorage.clear();
   window.location.reload();
-
 }
-
+//conditional rendering
 return (   
      <>
      { jwt ? 
@@ -34,7 +40,7 @@ return (
        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
        <div class="relative flex items-center justify-between h-16">
        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden"></div>
-        </div>
+       </div>
       <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex-shrink-0 flex items-center">
           <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"/>
@@ -97,3 +103,5 @@ return (
 }
 
 export default Menu
+//localhost:3000  /login
+//dindomain.se    /login
